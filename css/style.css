@@ -560,3 +560,15 @@ html[data-look="emerald"] .names .n, html[data-look="noir"] .names .n { -webkit-
   .names .n { font-size: 3.1rem; }
   footer { max-width: 1080px; margin-inline: auto; }
 }
+
+/* По темите: златото е съобразено с цвета на картичката */
+html[data-look="emerald"] .names .n, html[data-look="emerald"] .page-names,
+html[data-look="noir"] .names .n, html[data-look="noir"] .page-names {
+  background-image: linear-gradient(105deg, #B48B3D 0%, #D9B866 14%, #F3E0A2 24%, #FFF8E0 29%, #E3C676 34%, #B48B3D 48%, #CDA64F 62%, #F3E0A2 72%, #FFF8E0 76%, #D9B866 82%, #B48B3D 100%);
+  background-size: 300% 100%;
+  -webkit-text-stroke: .4px rgba(0,0,0,.35);
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,.55)) drop-shadow(0 0 6px rgba(227,198,118,.25)); }
+html[data-look="gold"] .names .n, html[data-look="gold"] .page-names {
+  background-image: linear-gradient(105deg, #5E4009 0%, #8D6A25 14%, #B48B3D 24%, #E3C676 29%, #A8803A 34%, #6B4A0E 48%, #8D6A25 62%, #C9A24F 72%, #E3C676 76%, #8D6A25 82%, #5E4009 100%);
+  background-size: 300% 100%;
+  -webkit-text-stroke: .6px rgba(60,38,5,.8); }
