@@ -532,3 +532,31 @@ html[data-look="emerald"] footer, html[data-look="noir"] footer { color: #D9CBA0
 html[data-look="emerald"] footer b, html[data-look="noir"] footer b { color: #F3E0A2; }
 html[data-look="emerald"] .replay, html[data-look="noir"] .replay, html[data-look="emerald"] .cue, html[data-look="noir"] .cue { color: #E3C676; }
 html[data-look="gold"] footer, html[data-look="gold"] .replay, html[data-look="gold"] .cue { color: #4A3610; }
+
+/* Златните букви: блясъкът минава през тях, но те никога не избледняват */
+.names .n, .page-names {
+  background-image: linear-gradient(105deg, #7A5A18 0%, #B48B3D 14%, #E3C676 24%, #FFF0B8 29%, #D4AE58 34%, #8D6A25 48%, #B48B3D 62%, #E9CF86 72%, #FFF0B8 76%, #C9A24F 82%, #7A5A18 100%);
+  background-size: 300% 100%;
+  -webkit-text-stroke: .6px rgba(96,66,12,.75);
+  paint-order: stroke fill;
+  filter: drop-shadow(0 1px 0 rgba(90,60,10,.6)) drop-shadow(0 2px 4px rgba(60,40,5,.35)); }
+.go .names .n1 { animation: rise 1.1s 1.1s forwards, foil2 9s 2.4s ease-in-out infinite; }
+.go .names .n2 { animation: rise 1.1s 1.9s forwards, foil2 9s 3.2s ease-in-out infinite; }
+.page-names { animation: foil2 9s ease-in-out infinite; }
+@keyframes foil2 { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0 0; } }
+html[data-look="emerald"] .names .n, html[data-look="noir"] .names .n { -webkit-text-stroke: .5px rgba(60,40,5,.6); }
+
+/* Компютър: поканата като широк лист в две колони */
+@media (min-width: 1000px) {
+  main.sheet { max-width: 1080px; padding-inline: 56px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 72px; margin-bottom: 64px; }
+  main.sheet > section { grid-column: span 2; padding-block: 64px; }
+  main.sheet > section:nth-of-type(3) { grid-column: 1; }
+  main.sheet > section:nth-of-type(4) { grid-column: 2; border-left: 1px solid var(--line); padding-left: 56px; margin-left: -36px; }
+  main.sheet > section:nth-of-type(3), main.sheet > section:nth-of-type(4) { border-top: 1px solid var(--line); }
+  main.sheet .wrap { max-width: 520px; }
+  main.sheet section:nth-of-type(6) .wrap, main.sheet section:nth-of-type(7) .wrap { max-width: 640px; }
+  .orn { width: 180px; height: 180px; }
+  .top .stagebox { transform: scale(1.35); margin-bottom: 120px; }
+  .names .n { font-size: 3.1rem; }
+  footer { max-width: 1080px; margin-inline: auto; }
+}
